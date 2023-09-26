@@ -38,7 +38,5 @@ int main() {
     std::cout << "Result of test 5: " << (result5) << std::endl;
     std::cout << "Result of test 6: " << (result6) << std::endl;
 
-    std::cout << "does a[10] exist? " << (A[10]) << std::endl;
-
     return 0;
 }
