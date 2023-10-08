@@ -48,10 +48,12 @@ void SolveMaze(char maze[ROWS][COLS], const string &MazeName)
     // Gives the starting position in the maze, and prints an messege if true or false.
     if (FindPath(1, 1, maze))
     {
+        // True
         cout << "Path to exit found, thus True" << endl;
     }
     else
     {
+        // False
         cout << "No path to exit, thus False" << endl;
     }
 }
