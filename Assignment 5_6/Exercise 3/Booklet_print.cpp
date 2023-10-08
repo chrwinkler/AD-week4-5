@@ -36,14 +36,17 @@ int main()
     cout << "Regular printing" << endl;
     cout << "book 1" << endl;
     RegularPrint(1, 8);
+    cout << endl;
     cout << "book 2" << endl;
     RegularPrint(1, 24);
 
+    cout << endl;
     cout << endl;
 
     cout << "Booklet printing" << endl;
     cout << "book 1" << endl;
     BookletPrint(1, 8);
+    cout << endl;
     cout << "book 2" << endl;
     BookletPrint(1, 24);
 
