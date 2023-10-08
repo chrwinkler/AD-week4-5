@@ -30,6 +30,7 @@ void BookletPrint(int StartPage, int EndPage)
     }
 }
 
+// Test-cases
 int main()
 {
 
