@@ -1,5 +1,5 @@
-#ifndef _INSERTION_SORT1_H
-#define _INSERTION_SORT1_H
+#ifndef _INSERTION_SORT1_H_
+#define _INSERTION_SORT1_H_
 
 #include <stdlib.h>
 

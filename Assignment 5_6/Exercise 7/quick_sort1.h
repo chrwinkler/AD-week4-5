@@ -3,11 +3,6 @@
 #include <math.h>
 #include "insertion_sort1.h"
 
-bool useInsertion(int *begin, int *end)
-{
-	return (2 * log(end - begin) <= 16);
-}
-
 template <typename Comparable>
 void introSort(vector<Comparable> &a)
 {
@@ -17,6 +12,11 @@ void introSort(vector<Comparable> &a)
 	}
 	else
 		quickSort(a);
+}
+
+bool useInsertion(int *begin, int *end)
+{
+	return (2 * log(end - begin) <= 16);
 }
 
 /**
