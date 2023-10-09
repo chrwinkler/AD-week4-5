@@ -58,6 +58,7 @@ void SolveMaze(char maze[ROWS][COLS], const string &MazeName)
     }
 }
 
+// Test-Cases
 int main()
 {
     char maze1[ROWS][COLS] = {
