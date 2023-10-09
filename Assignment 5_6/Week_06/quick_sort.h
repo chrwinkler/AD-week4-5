@@ -6,7 +6,8 @@
  * Then compute partition, restore the pivot and return its position.
  */
 template <typename Comparable>
-int partition(vector<Comparable>& a, int left, int right) {
+int partition(vector<Comparable> &a, int left, int right)
+{
 	int center = (left + right) / 2;
 
 	if (a[center] < a[left])
@@ -20,17 +21,21 @@ int partition(vector<Comparable>& a, int left, int right) {
 	std::swap(a[center], a[right - 1]);
 
 	// Now the partitioning
-	Comparable& pivot = a[right - 1];
+	Comparable &pivot = a[right - 1];
 	int i = left, j = right - 1;
-	do {
-		while (a[++i] < pivot);
-		while (pivot < a[--j]);
-		if (i < j) {
+	do
+	{
+		while (a[++i] < pivot)
+			;
+		while (pivot < a[--j])
+			;
+		if (i < j)
+		{
 			std::swap(a[i], a[j]);
 		}
 	} while (i < j);
 
-	std::swap(a[i], a[right - 1]);	// Restore pivot
+	std::swap(a[i], a[right - 1]); // Restore pivot
 	return i;
 }
 
@@ -41,13 +46,18 @@ int partition(vector<Comparable>& a, int left, int right) {
  * right is the right-most index of the subarray.
  */
 template <typename Comparable>
-void quickSort(vector<Comparable>& a, int left, int right) {
-	if (right - left > 1) {
+void quickSort(vector<Comparable> &a, int left, int right)
+{
+	if (right - left > 1)
+	{
 		int i = partition(a, left, right);
 		quickSort(a, left, i - 1);	// Sort small elements
-		quickSort(a, i + 1, right);	// Sort large elements
-	} else {						// Do an insertion sort on the subarray
-		if (a[left] > a[right]) {
+		quickSort(a, i + 1, right); // Sort large elements
+	}
+	else
+	{ // Do an insertion sort on the subarray
+		if (a[left] > a[right])
+		{
 			std::swap(a[left], a[right]);
 		}
 	}
@@ -56,7 +66,9 @@ void quickSort(vector<Comparable>& a, int left, int right) {
 /**
  * Quicksort algorithm (driver).
  */
-template <typename Comparable> void quickSort(vector < Comparable > &a) {
+template <typename Comparable>
+void quickSort(vector<Comparable> &a)
+{
 	quickSort(a, 0, a.size() - 1);
 }
 
