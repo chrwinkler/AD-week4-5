@@ -95,11 +95,20 @@ int main()
         {'X', ' ', 'X', ' ', 'X'},
         {'X', 'X', 'E', 'X', 'X'}};
 
+    cout << "using SolveMaze to make it easier to test the mazes" << endl;
     SolveMaze(maze1, "Maze 1"); // True
     SolveMaze(maze2, "Maze 2"); // True
     SolveMaze(maze3, "Maze 3"); // False
     SolveMaze(maze4, "Maze 4"); // True
     SolveMaze(maze5, "Maze 5"); // False - can't see the E in conners.
+    cout << endl;
+    cout << endl;
+    /* cout << "Now using FindPath to see if they return true or false" << endl;
+    cout << (FindPath(1, 1, maze1) ? "True" : "False") << endl; // True
+    cout << (FindPath(1, 1, maze2) ? "True" : "False") << endl; // True
+    cout << (FindPath(1, 1, maze3) ? "True" : "False") << endl; // False
+    cout << (FindPath(1, 1, maze4) ? "True" : "False") << endl; // True
+    cout << (FindPath(1, 1, maze5) ? "True" : "False") << endl; // False - can't see the E in conners. */
 
     return 0;
 }
